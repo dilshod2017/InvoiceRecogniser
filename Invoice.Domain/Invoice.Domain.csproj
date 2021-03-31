@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.AI.FormRecognizer" Version="3.0.0" />
     <PackageReference Include="linq2db" Version="3.3.0" />
     <PackageReference Include="linq2db.SqlServer" Version="3.3.0" />
     <PackageReference Include="linq2db.Tools" Version="3.3.0" />
