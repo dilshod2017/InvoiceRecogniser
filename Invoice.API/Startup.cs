@@ -1,4 +1,5 @@
 using Invoice.Domain;
+using InvoiceAPIMethods;
 using LinqToDB.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,6 +40,9 @@ namespace Invoice.API
         {
             services.AddControllers()
                .AddJsonOptions(x => x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+            services.AddSingleton(typeof(MainCachingPipes));
+            services.AddSingleton(typeof(MainCachingControl));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
